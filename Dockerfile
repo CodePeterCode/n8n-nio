@@ -1,0 +1,10 @@
+FROM n8nio/n8n:1.100.1
+
+# Ställ in rätt port och exponera
+ENV N8N_PORT=5678
+ENV N8N_HOST=0.0.0.0
+ENV WEBHOOK_TUNNEL_URL=${WEBHOOK_TUNNEL_URL}
+
+EXPOSE 5678
+
+CMD ["n8n"]
